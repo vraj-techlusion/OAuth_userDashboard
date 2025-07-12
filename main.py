@@ -1,13 +1,12 @@
 from fastapi import FastAPI
+from starlette.middleware.sessions import SessionMiddleware
+from routes import login, dashboard
 
 app = FastAPI()
 
+# For OAuth session state
+app.add_middleware(SessionMiddleware, secret_key="IPn-TRCzjviyOP3rUHT3mbhhC37r8t4r0J073v2z5WI")
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
-
-@app.get("/hello/{name}")
-async def say_hello(name: str):
-    return {"message": f"Hello {name}"}
+# Register routes
+app.include_router(login.router)
+app.include_router(dashboard.router)

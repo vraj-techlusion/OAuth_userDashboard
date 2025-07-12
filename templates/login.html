@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+
+  <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md text-center">
+    <h1 class="text-2xl font-bold text-gray-800 mb-6">Login to Your Account</h1>
+
+    <a href="/auth/github" class="w-full flex items-center justify-center mb-4 px-4 py-2 bg-gray-800 hover:bg-black text-white font-semibold rounded transition">
+      <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 0C5.372 0 0 5.373 0 12c0 5.303...Z" />
+      </svg>
+      Continue with GitHub
+    </a>
+
+    <a href="/auth/google" class="w-full flex items-center justify-center px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded transition">
+      <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M21.35 11.1H12v2.7h5.34...Z" />
+      </svg>
+      Continue with Google
+    </a>
+  </div>
 
 </body>
 </html>
