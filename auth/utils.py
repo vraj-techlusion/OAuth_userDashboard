@@ -4,7 +4,7 @@ from fastapi import HTTPException, Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 import os
 
-SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key")
+SECRET_KEY = os.getenv("SECRET_KEY", "IPn-TRCzjviyOP3rUHT3mbhhC37r8t4r0J073v2z5WI")
 ALGORITHM = "HS256"
 TOKEN_EXPIRE_MINUTES = 60
 
